@@ -114,6 +114,44 @@ register_sidebar( array(
 }
 
 
+add_action( 'widgets_init', 'blankslate_widgets_bottom' );
+function blankslate_widgets_bottom() {
+register_sidebar( array(
+'name' => esc_html__( 'Bottom Widget Area', 'blankslate' ),
+'id' => 'bottom-widget-area',
+'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+'after_widget' => '</li>',
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
+}
+
+
+add_action( 'widgets_init', 'blankslate_widgets_head_left' );
+function blankslate_widgets_head_left() {
+register_sidebar( array(
+'name' => esc_html__( 'Head-Left Widget Area', 'blankslate' ),
+'id' => 'head-left-widget-area',
+'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+'after_widget' => '</li>',
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
+}
+
+add_action( 'widgets_init', 'blankslate_widgets_head_right' );
+function blankslate_widgets_head_right() {
+register_sidebar( array(
+'name' => esc_html__( 'Head-Right Widget Area', 'blankslate' ),
+'id' => 'head-right-widget-area',
+'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+'after_widget' => '</li>',
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
+}
+
+
 function get_excerpt_length(){
     return 40;
 }

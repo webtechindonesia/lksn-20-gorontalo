@@ -38,6 +38,8 @@ body {
 #footer{
     text-align: center;
     padding: 15px;
+    background-color: #fff;
+    margin-top: 25px;
 }
 
 .h1, h1 {
@@ -102,4 +104,70 @@ aside{
 .entry-meta{
     margin-bottom: 5px;
     margin-top:5px;
+}
+
+#sidebar_top{
+    background-color: #27ae60;
+    border-radius:5px;
+    border: 1px solid #16a085;
+    box-shadow: 0 0 32px -4px rgba(0,0,0,.15);
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+    margin-left:10px;
+}
+
+nav li {
+    padding: 5px;
+}
+
+#menu li a{
+    padding: 8px;
+}
+
+#menu li a:hover{
+    background-color: #eee;
+    border-radius:4px;
+    padding: 8px;
+}
+
+a{
+    color: #444!important;
+}
+
+a:hover{
+    color: #000!important;
+    text-decoration: none!important;
+}
+
+
+.h3, h3 {
+    font-size: 1.75rem;
+}
+
+.widget-title{
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+.widget-container{
+    padding: 5px;
+}
+
+.widget-area{
+    margin-bottom:10px;
+    line-height: 1.5;
+}
+
+#sidebar_bottom{
+    margin-top: 25px;
+    text-align: center;
+}
+
+#sidebar_bottom img{
+    max-width: 150px;
+    height: auto;
+
 }

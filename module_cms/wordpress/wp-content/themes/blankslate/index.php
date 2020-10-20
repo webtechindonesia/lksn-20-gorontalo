@@ -1,5 +1,32 @@
 <?php get_header(); ?>
-<aside id="sidebar">
+<div class="row">
+    <div class="col-8">
+    <aside id="sidebar_head_left" class="my-3">
+    <?php if ( is_active_sidebar( 'head-left-widget-area' ) ) : ?>
+    <div id="head" class="widget-area">
+    <ul class="xoxo">
+    <?php dynamic_sidebar( 'head-left-widget-area' ); ?>
+    </ul>
+    </div>
+    <?php endif; ?>
+    </aside>
+    </div>
+    <div class="col-4">      
+    <aside id="sidebar_head_right" class="my-3">
+    <?php if ( is_active_sidebar( 'head-right-widget-area' ) ) : ?>
+    <div id="head" class="widget-area">
+    <ul class="xoxo">
+    <?php dynamic_sidebar( 'head-right-widget-area' ); ?>
+    </ul>
+    </div>
+    <?php endif; ?>
+    </aside>
+    </div>
+</div>
+
+
+
+<aside id="sidebar_top">
 <?php if ( is_active_sidebar( 'top-widget-area' ) ) : ?>
 <div id="top" class="widget-area">
 <ul class="xoxo">
@@ -23,4 +50,13 @@
 <?php get_sidebar(); ?>
 </div>
 </div>
+<aside id="sidebar_bottom">
+<?php if ( is_active_sidebar( 'bottom-widget-area' ) ) : ?>
+<div id="bottom" class="widget-area">
+<ul class="xoxo">
+<?php dynamic_sidebar( 'bottom-widget-area' ); ?>
+</ul>
+</div>
+<?php endif; ?>
+</aside>
 <?php get_footer(); ?>
