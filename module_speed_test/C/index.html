@@ -36,7 +36,9 @@
             Green <input type="range" min="0" max="255" step="1" value="10"  id="green">
             Blue <input type="range" min="0" max="255" step="1" value="115"  id="blue">
 
-            <div id="display"></div>
+            <div id="display">
+            
+            </div>
         </div>
     </div>
 
@@ -49,6 +51,8 @@
                     blue = document.getElementById("blue").value
                 var display = document.getElementById("display");
                 display.style.background = "rgb(" + red + "," + green +"," + blue +" )";
+               
+ 
             })
         }
 </script>
