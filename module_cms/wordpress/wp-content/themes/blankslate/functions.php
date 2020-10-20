@@ -152,6 +152,19 @@ register_sidebar( array(
 }
 
 
+add_action( 'widgets_init', 'blankslate_widgets_alert' );
+function blankslate_widgets_alert() {
+register_sidebar( array(
+'name' => esc_html__( 'Alert Widget Area', 'blankslate' ),
+'id' => 'alert-widget-area',
+'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+'after_widget' => '</li>',
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
+}
+
+
 function get_excerpt_length(){
     return 40;
 }
@@ -163,7 +176,7 @@ function return_excerpt_text() {
 
 add_filter('excerpt_more', 'return_excerpt_text');
 add_filter('excerpt_length', 'get_excerpt_length');
-add_image_size('small_thumb', 200, 200, true);
+add_image_size('small_thumb', 150, 150, true);
 
 add_action( 'wp_head', 'blankslate_pingback_header' );
 function blankslate_pingback_header() {

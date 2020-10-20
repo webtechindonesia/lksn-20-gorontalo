@@ -1,4 +1,14 @@
 <?php get_header(); ?>
+<aside id="sidebar_alert" class="my-3">
+    <?php if ( is_active_sidebar( 'alert-widget-area' ) ) : ?>
+    <div id="head" class="widget-area">
+    <ul class="xoxo">
+    <?php dynamic_sidebar( 'alert-widget-area' ); ?>
+    </ul>
+    </div>
+    <?php endif; ?>
+    </aside>
+
 <div class="row">
     <div class="col-8">
     <aside id="sidebar_head_left" class="my-3">

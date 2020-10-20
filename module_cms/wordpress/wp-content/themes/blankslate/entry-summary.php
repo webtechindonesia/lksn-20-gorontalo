@@ -1,3 +1,4 @@
+
 <div class="entry-summary">
 <?php if ( has_post_thumbnail() ) : ?>
 
