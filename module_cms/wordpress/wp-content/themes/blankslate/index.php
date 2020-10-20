@@ -48,7 +48,8 @@
 <div class="row mt-5">
 <div class="col-8">
 <main id="content">
-    <h3>Berita Acara</h3>
+    <h2>Berita Acara</h2>
+    <hr/>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'entry' ); ?>
 <?php comments_template(); ?>
