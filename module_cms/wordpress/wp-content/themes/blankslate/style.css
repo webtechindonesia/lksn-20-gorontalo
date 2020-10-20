@@ -143,6 +143,12 @@ a:hover{
 }
 
 
+#sidebar_alert{
+    background-color: #16a085;
+    border: 2px solid #eee;
+
+}
+
 .h3, h3 {
     font-size: 1.75rem;
 }

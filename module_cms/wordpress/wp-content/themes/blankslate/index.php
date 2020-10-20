@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<aside id="sidebar_alert" class="my-3">
+<aside id="sidebar_alert" class="my-3 bg-success bordered text-white">
     <?php if ( is_active_sidebar( 'alert-widget-area' ) ) : ?>
     <div id="head" class="widget-area">
     <ul class="xoxo">
