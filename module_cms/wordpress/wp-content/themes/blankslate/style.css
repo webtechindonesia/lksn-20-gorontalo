@@ -1,9 +1,9 @@
 /*
-Theme Name: BlankSlate
-Theme URI: https://github.com/tidythemes/blankslate
+Theme Name: Covid19 Indonesia
+Theme URI: https://github.com/tidythemes/Covid19 Indonesia
 Author: TidyThemes
 Author URI: http://tidythemes.com/
-Description: Please read: tidythemes.com/concept. BlankSlate is the definitive WordPress HTML5 boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/blankslate/issues. Thank you.
+Description: Please read: tidythemes.com/concept. Covid19 Indonesia is the definitive WordPress HTML5 boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/Covid19 Indonesia/issues. Thank you.
 Version: 2019.1
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
@@ -19,6 +19,13 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important;
+    background-color: #eee!important;
+}
+
+#menu {
+    position:sticky;
+    z-index: 99;
+    box-shadow: 0 0 32px -4px rgba(0,0,0,.15);
 }
 
 #header{
@@ -30,6 +37,7 @@ body {
 
 #footer{
     text-align: center;
+    padding: 15px;
 }
 
 .h1, h1 {
@@ -47,3 +55,51 @@ img {
     height: auto;
 }
 
+.size-small_thumb {
+    float: left;
+    margin-right: 19px;
+}
+
+.entry-summary{
+    text-align: justify;
+    line-height: 1.5;
+}
+
+article{
+ 
+    padding: 10px!important;
+    margin-bottom: 15px!important;
+}
+
+#content{
+    
+    background-color: #fff;
+    padding: 20px;
+    border-radius:5px;
+    border:1px solid #eee;
+    box-shadow: 0 0 32px -4px rgba(0,0,0,.15);
+}
+
+aside{
+    border: 1px solid #eee!important;
+    padding: 20px!important;
+    background-color: #fff;
+    border-radius:5px;
+    border:1px solid #eee;
+    box-shadow: 0 0 32px -4px rgba(0,0,0,.15);
+    line-height: 1.5!important;
+}
+
+#menu ul {
+    display: flex;
+    padding: 15px;
+}
+#menu li{
+    margin-left:10px;
+    padding:5px;
+}
+
+.entry-meta{
+    margin-bottom: 5px;
+    margin-top:5px;
+}
