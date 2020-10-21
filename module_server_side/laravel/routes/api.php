@@ -14,8 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::prefix('auth')->namespace('auth')->group(function () {
-
+    
     Route::get('user', 'AuthController@user')->middleware('auth:api');
     Route::post('login', 'AuthController@login');
     Route::post('register', 'AuthController@register');
 });
+
+Route::get('vote', 'VoteController@index');
