@@ -16,6 +16,8 @@ class VoteResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'choiceId' => $this->choice->id,
+            'userId' => $this->user->id,
             'pollId' => $this->poll->id,
             'published' => $this->created_at->format('d F Y'),
         ];

@@ -23,3 +23,4 @@ Route::prefix('auth')->namespace('auth')->group(function () {
 Route::get('vote', 'VoteController@index');
 Route::get('poll', 'PollController@index');
 Route::get('choice', 'ChoiceController@index');
+Route::post('submitVote', 'VoteController@store');

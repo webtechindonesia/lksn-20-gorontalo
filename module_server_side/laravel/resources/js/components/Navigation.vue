@@ -17,7 +17,7 @@
       </template>
       <template v-if="user">
       <li class="nav-item">
-        <a class="nav-link" @click="handleClick" href="javascript:void(0)">Logout</a>
+        <a class="nav-link" @click.prevent="handleSubmit" href="javascript:void(0)">Logout</a>
       </li>
       </template>
       <li class="nav-item dropdown">
@@ -45,7 +45,16 @@
 
 <script>
     export default {
-       handleClick() {
+      data() {
+        return {
+          user: null
+        }
+      },
+      async created() {
+    const response = await axios.get('user');
+    this.user = response.data;
+  },
+      handleSubmit() {
          localStorage.removeItem('token');
          this.$router.push('/login')
        }

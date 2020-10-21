@@ -14,4 +14,9 @@ public function poll()
     return $this->belongsTo(Poll::class); 
 }
 
+public function choice() 
+{ 
+    return $this->belongsTo(Choice::class); 
+}
+
 }
