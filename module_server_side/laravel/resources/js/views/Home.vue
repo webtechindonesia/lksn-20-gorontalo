@@ -5,16 +5,16 @@
 
       <table class="table">
   <thead>
-    <tr>
+    <tr >
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">choice</th>
+      <th scope="col">user</th>
+      <th scope="col">poll</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td></td>
+    <tr v-for="vote in votes" :key="vote.id">
+      <td> {{vote.user}} </td>
     </tr>
   </tbody>
 </table>
@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       user:null,
-      votes: ''
+      polls: ''
     }
   },
   async created() {
@@ -34,12 +34,12 @@ export default {
     this.user = response.data;
   },
   mounted() {
-    this.getNote();
+    this.getPolls();
   },
   methods: {
-    async getNote()  {
-      let response = await axios.get('/vote').then((response)=>  {
-        this.notes = response.data.data
+    async getPolls()  {
+      let response = await axios.get('vote').then((response)=>  {
+        this.polls = response.data.data
         console.log(response.data.data);
       })
     }

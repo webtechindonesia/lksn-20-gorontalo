@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\{Votes,Poll,Choice,User};
+use App\{Vote,Poll,Choice,User};
+use App\Http\Resources\VoteResource;
 
 
 class VoteController extends Controller
 {
     public function index()
     {
-        $votes = Vote::with('poll','choice')->latest()->get();
+        $votes = Vote::with('poll')->latest()->get();
         return VoteResource::collection($votes);
     }
 }

@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vote extends Model
 {
-    protected $table = "Votes";
+    protected $guarded = [];
 
  
-public function polls() 
+public function poll() 
 { 
-    return $this->belongsTo('App\Polls'); 
+    return $this->belongsTo(Poll::class); 
 }
 
 }

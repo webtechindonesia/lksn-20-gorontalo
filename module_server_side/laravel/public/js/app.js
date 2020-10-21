@@ -2018,7 +2018,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   data: function data() {
     return {
       user: null,
-      votes: ''
+      polls: ''
     };
   },
   created: function created() {
@@ -2046,10 +2046,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }))();
   },
   mounted: function mounted() {
-    this.getNote();
+    this.getPolls();
   },
   methods: {
-    getNote: function getNote() {
+    getPolls: function getPolls() {
       var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
@@ -2059,8 +2059,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context2.prev = _context2.next) {
               case 0:
                 _context2.next = 2;
-                return axios.get('/vote').then(function (response) {
-                  _this2.notes = response.data.data;
+                return axios.get('vote').then(function (response) {
+                  _this2.polls = response.data.data;
                   console.log(response.data.data);
                 });
 
@@ -38720,7 +38720,19 @@ var render = function() {
     _vm._v("\n      Yuk Pilih\n      "),
     _vm.user ? _c("h3", [_vm._v("Halo")]) : _vm._e(),
     _vm._v(" "),
-    _vm._m(0)
+    _c("table", { staticClass: "table" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "tbody",
+        _vm._l(_vm.votes, function(vote) {
+          return _c("tr", { key: vote.id }, [
+            _c("td", [_vm._v(" " + _vm._s(vote.user) + " ")])
+          ])
+        }),
+        0
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -38728,20 +38740,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("table", { staticClass: "table" }, [
-      _c("thead", [
-        _c("tr", [
-          _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
-          _vm._v(" "),
-          _c("th", { attrs: { scope: "col" } }, [_vm._v("First")]),
-          _vm._v(" "),
-          _c("th", { attrs: { scope: "col" } }, [_vm._v("Last")]),
-          _vm._v(" "),
-          _c("th", { attrs: { scope: "col" } }, [_vm._v("Handle")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("tbody", [_c("tr", [_c("td")])])
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("choice")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("user")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("poll")])
+      ])
     ])
   }
 ]

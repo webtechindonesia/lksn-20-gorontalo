@@ -8,13 +8,13 @@ class Poll extends Model
 {
     protected $guarded = [];
 
-    public function votes()
+    public function vote()
     {
-        return $this->hasMany('App\Votes');
+        return $this->hasMany(Vote::class);
     }
 
-    public function choices()
+    public function choice()
     {
-        return $this->hasMany('App\Choice');
+        return $this->hasMany(Choice::class);
     }
 }
