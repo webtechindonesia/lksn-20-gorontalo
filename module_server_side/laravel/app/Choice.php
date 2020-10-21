@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Choice extends Model
 {
-    protected $table = "choice";
+    protected $table = "choices";
 
-    public function polls() 
+    public function poll() 
 { 
-    return $this->belongsTo('App\Polls'); 
+    return $this->belongsTo(Poll::class); 
 }
 }

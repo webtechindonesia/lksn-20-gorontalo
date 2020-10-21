@@ -2,22 +2,18 @@
   <div>
       Yuk Pilih
       <h3 v-if="user">Halo</h3>
+  
+    <div class="card" v-for="poll in polls" :key="poll.id">
+      <div class="card-body">
+        <h3> {{poll.title}} </h3>
+        <p> {{poll.description}} </p>
 
-      <table class="table">
-  <thead>
-    <tr >
-      <th scope="col">#</th>
-      <th scope="col">choice</th>
-      <th scope="col">user</th>
-      <th scope="col">poll</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="vote in votes" :key="vote.id">
-      <td> {{vote.user}} </td>
-    </tr>
-  </tbody>
-</table>
+      <div v-for="choice in choices" :key="choice.id">
+        {{choice.choice}}
+      </div>
+      </div>
+    </div>
+    </template>
   </div>
 </template>
 
@@ -26,7 +22,8 @@ export default {
   data() {
     return {
       user:null,
-      polls: ''
+      polls: '',
+      choices: ''
     }
   },
   async created() {
@@ -35,11 +32,18 @@ export default {
   },
   mounted() {
     this.getPolls();
-  },
+    this.getChoices();
+;  },
   methods: {
     async getPolls()  {
-      let response = await axios.get('vote').then((response)=>  {
+      let response = await axios.get('/api/poll').then((response)=>  {
         this.polls = response.data.data
+        console.log(response.data.data);
+      })
+    },
+    async getChoices() {
+      let response = await axios.get('/api/choice').then((reponse)=> {
+        this.choices = response.data.data;
         console.log(response.data.data);
       })
     }
