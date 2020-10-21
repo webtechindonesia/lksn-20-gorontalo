@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\{Votes,Poll,Choice,User};
+use App\{Vote,Poll,Choice,User};
 use App\Http\Resources\PollResource;
 
 class PollController extends Controller

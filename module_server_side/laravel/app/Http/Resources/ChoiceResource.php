@@ -15,6 +15,7 @@ class ChoiceResource extends JsonResource
     public function toArray($request)
     {
         return [
+            'id' => $this->id,
             'choice' => $this->choice,
             'poll_id' => $this->poll->id,
         ];

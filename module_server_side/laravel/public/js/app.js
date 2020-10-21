@@ -2010,6 +2010,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2084,7 +2095,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context3.prev = _context3.next) {
               case 0:
                 _context3.next = 2;
-                return axios.get('/api/choice').then(function (reponse) {
+                return axios.get('/api/choice').then(function (response) {
                   _this3.choices = response.data.data;
                   console.log(response.data.data);
                 });
@@ -38737,8 +38748,83 @@ render._withStripped = true
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _vm._v("\n    Yuk Pilih\n    "),
+      _vm.user ? _c("h3", [_vm._v("Halo")]) : _vm._e(),
+      _vm._v(" "),
+      _vm._l(_vm.polls, function(poll) {
+        return _c("div", { key: poll.id, staticClass: "card" }, [
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", [
+              _c("h3", [_vm._v(" " + _vm._s(poll.title) + " ")]),
+              _vm._v(" "),
+              _c("p", [_vm._v(" " + _vm._s(poll.description) + " ")])
+            ]),
+            _vm._v(" "),
+            _c(
+              "form",
+              {
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.handleSubmit($event)
+                  }
+                }
+              },
+              [
+                _vm._l(_vm.choices, function(choice) {
+                  return _c(
+                    "div",
+                    { key: choice.id, staticClass: "form-check" },
+                    [
+                      _c("input", {
+                        staticClass: "form-check-input",
+                        attrs: {
+                          type: "checkbox",
+                          value: "",
+                          id: "defaultCheck1"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        {
+                          staticClass: "form-check-label",
+                          attrs: { for: "defaultCheck1" }
+                        },
+                        [
+                          _vm._v(
+                            "\n        " + _vm._s(choice.choice) + "\n      "
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                }),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+                  [_vm._v("Submit")]
+                )
+              ],
+              2
+            )
+          ])
+        ])
+      })
+    ],
+    2
+  )
+}
 var staticRenderFns = []
+render._withStripped = true
 
 
 
