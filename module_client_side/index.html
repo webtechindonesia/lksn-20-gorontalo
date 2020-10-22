@@ -44,12 +44,43 @@
                           <input type="text" class="form-control" id="inputPassword2" placeholder="adi lasoma ...">
                         </div>
                       </form>
-                    <button class="btn btn-lg btn-secondary mt-3" onclick="window.location.href='game.html'">Play Phyton</button>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModal">
+                        Play the Game
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade  text-black" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header text-dark">
+                            <h5 class="modal-title" id="exampleModalLabel text-dark">Instructions</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body  text-dark">
+                                <p>1. This game is made with heart so play with heart</p>
+                                <p>2. This game aims to entertain</p> 
+                                <p>3. Do not damage anything beside you</p> 
+                                <p>4. So why are you still reading this and not playing the game?</p> 
+                            </div>
+                            <div class="modal-footer justify-content text-center">
+                                <button class="btn btn-lg btn-secondary mt-3" onclick="window.location.href='game.html'">Play Phyton</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                   
                 </div>
         </div>
         </div>
       
         
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
