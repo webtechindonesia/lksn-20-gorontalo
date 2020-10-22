@@ -16,8 +16,12 @@
         right: 0;
         left: 0;
     }
+    #gambar {width: 960px; margin:auto;margin-top:-50px}
 </style>
 <body>
+<div class="container">
+    <div id="gambar"></div>
+</div>
 <script>
 var
 
@@ -51,7 +55,16 @@ keystate, /* Object, used for keyboard inputs */
 frames,   /* number, used for animation */
 score,
 highScore,
-localStorageName = "crackalien"
+localStorageName = "crackalien";
+myImage = new Image(960, 300);
+	myImage.src = 'GORONTALO_game_board_2.png';
+	x = document.getElementById("gambar");
+	x.appendChild(myImage);	
+// gambar = new Image();
+// gambar.src = "GORONTALO_game_board_2.png";
+// gambar.onload = function() {
+//     ctx.drawImage(gambar, 50, 50);
+// }
 
 
 ;	  /* number, keep track of the player score */
