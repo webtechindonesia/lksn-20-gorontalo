@@ -6,21 +6,40 @@
     <title>Phyton</title>
 </head>
 <style>
+    body {
+        background-color: #2c3e50;
+        color: #fff;
+    }
     canvas{
         display:block;
         position: absolute;
-        border: 1px solid #000;
+        color: #fff;
         margin: auto;
         top: 0;
         bottom: 0;
         right: 0;
         left: 0;
     }
-    #gambar {width: 960px; margin:auto;margin-top:-50px}
+    #gambar {
+        width: 960px; 
+        margin:auto;
+        margin-top:-50px
+    }
+    #timer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 30px;
+        width: 100%;
+        background: #7ADAF6 url(images/timer_symbol.png) no-  repeat 5px 50%;  
+        border-bottom: 1px solid #4F8EA1;
+        transition: all .3s ease-out;
+    }
 </style>
 <body>
 <div class="container">
     <div id="gambar"></div>
+    <div id="timer"></div>
 </div>
 <script>
 var
@@ -307,6 +326,7 @@ function update() {
 		if (grid.get(nx, ny) === FRUIT) {
 			// increment the score and sets a new fruit position
 			score++;
+			highScore++;
 			setFood();
 		} else {
 			// take out the first item from the snake queue i.e
@@ -336,7 +356,7 @@ function draw() {
 			// each cell
 			switch (grid.get(x, y)) {
 				case EMPTY:
-					ctx.fillStyle = "#fff";
+					ctx.fillStyle = "#192a3b";
 					break;
 				case SNAKE:
 					ctx.fillStyle = "#0ff";
@@ -350,12 +370,14 @@ function draw() {
 	}
 	// changes the fillstyle once more and draws the score
 	// message to the canvas
-	ctx.fillStyle = "#000";
-	ctx.fillText("SCORE: " + score , highScore, 10, canvas.height-10);
+	ctx.fillStyle = "#fff";
+	ctx.fillText("SCORE: " + score , 10, canvas.height-10);
+	ctx.fillText("HIGHSCORE: " + highScore ,  10, canvas.height-550);
 }
 
 // start and run the game
 main();
 </script>
+<script src='js/timer.js'></script>
 </body>
 </html>
